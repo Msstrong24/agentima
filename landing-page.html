@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agentimate - Idea to design in seconds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .logo img {
+            height: 28px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-left: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary {
+            background: white;
+            color: black;
+            border: none;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 0 60px;
+        }
+        
+        .heart-icon {
+            margin: 0 auto 30px;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        
+        .gradient-badge {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-description {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+        
+        .input-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .input-container textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+            min-height: 80px;
+        }
+        
+        .input-actions {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            margin-top: 10px;
+        }
+        
+        .input-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .privacy-setting {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-button {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        .feature-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        footer {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Gradient heart */
+        .gradient-heart {
+            background: linear-gradient(135deg, #FF9900, #FF5E62);
+            width: 100%;
+            height: 100%;
+            clip-path: path('M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z');
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div style="color: #FF9900;">❤️</div>
+                agentimate
+            </div>
+            <div class="nav">
+                <div class="nav-links">
+                    <a href="#">Support</a>
+                    <a href="#">Launched</a>
+                    <a href="#">Learn</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg></a>
+                </div>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Sign in</button>
+                <button class="btn btn-primary">Sign up</button>
+            </div>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <div class="heart-icon">
+                    <div class="gradient-heart"></div>
+                </div>
+                
+                <div class="gradient-badge">
+                    🚀 Best website design by Monday gets $3k cash
+                </div>
+                
+                <h1 class="hero-title">Idea to design in seconds.</h1>
+                <p class="hero-description">agentimate is your superhuman full stack engineer.</p>
+                
+                <div class="input-container">
+                    <textarea placeholder="Ask agentimate to create an internal tool..."></textarea>
+                    <div class="input-actions">
+                        <div class="input-buttons">
+                            <button class="btn btn-outline">📎 Attach</button>
+                            <button class="btn btn-outline">📥 Import</button>
+                        </div>
+                        <div class="privacy-setting">
+                            <span>🌐 Public</span>
+                            <span>👤</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <div class="feature-button">Kanban board ↗</div>
+                    <div class="feature-button">Remotion video ↗</div>
+                    <div class="feature-button">Habit tracker ↗</div>
+                    <div class="feature-button">AI image generator ↗</div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="stat">Join <strong>140,000+</strong> people using agentimate</div>
+            <img src="https://tinyurl.com/2s4b8jfb" alt="Wired logo" height="30">
+            <div class="rating">
+                <strong>4.9/5.0</strong>
+            </div>
+        </footer>
+    </div>
+
+    <script src="lib/anime.min.js"></script>
+    <script>
+        // Add animations with anime.js
+        document.addEventListener('DOMContentLoaded', () => {
+            // Heart animation
+            anime({
+                targets: '.gradient-heart',
+                scale: [0.8, 1],
+                opacity: [0.8, 1],
+                duration: 1500,
+                easing: 'easeInOutQuad',
+                direction: 'alternate',
+                loop: true
+            });
+            
+            // Staggered fade in for UI elements
+            anime({
+                targets: ['.logo', '.nav', '.auth-buttons', '.gradient-badge', '.hero-title', '.hero-description', '.input-container', '.features', 'footer'],
+                opacity: [0, 1],
+                translateY: [20, 0],
+                delay: anime.stagger(100, {start: 300}),
+                duration: 800,
+                easing: 'easeOutQuad'
+            });
+        });
+    </script>
+</body>
+</html> 
